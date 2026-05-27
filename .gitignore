@@ -1,1 +1,5 @@
 mysql/data/
+.DS_Store
+node_modules
+vendor
+.env
