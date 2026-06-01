@@ -21,6 +21,13 @@ services:
     image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MTSQL_DATABASE: community
+      MYSQL_DATABASE: anonymous_db
       MYSQL_USER: user
       MYSQL_PASSWORD: 1234
+
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    
+volumes:
+  mysql_data:
