@@ -11,7 +11,14 @@
 
     include(__DIR__ . "/components/footer.php");
 
-    echo "DB 연결 성공";
+    session_start();
+
+    if(isset($_SESSION['nickname'])){
+        echo $_SESSION['nickname']. "님";
+    }else{
+        echo "로그인 안됨";
+    }
+    
 ?>
 
 <!DOCTYPE html>
