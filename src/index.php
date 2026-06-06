@@ -32,24 +32,24 @@
 <body>
     <header>
         <nav>
-            <div class="logo">
+            <div>
                 익명 고민 상담소
             </div>
-            <ul class="menu">
-                <li class="menu-li"><a href="index.php">홈</a></li>
-                <li class="menu-li">고민 게시판</li>
-                <li class="menu-li">자유 게시판</li>
-                <li class="menu-li">오늘의 한마디</li>
-                <li class="menu-li">공지사항</li>
+            <ul>
+                <li><a href="index.php">홈</a></li>
+                <li>고민 게시판</li>
+                <li>자유 게시판</li>
+                <li>오늘의 한마디</li>
+                <li>공지사항</li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h2 class ="hero-title">
+        <section>
+            <h2>
                 혼자 고민하지 마세요,<br>
-                여기, <span class="highlight">당신의 이야기</span>를 들어줄<br>
+                여기, <span>당신의 이야기</span>를 들어줄<br>
                 누군가가 있어요.
             </h2>
             <p>익명으로 고민을 나누고 공감받아보세요.</p>
