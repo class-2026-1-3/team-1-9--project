@@ -1,0 +1,265 @@
+/* ==========================
+   기본 설정
+========================== */
+
+/* 모든 태그의 기본 여백 제거 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard', sans-serif;
+}
+
+/* 링크 밑줄 제거 */
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 리스트 점 제거 */
+ul{
+    list-style: none;
+}
+
+/* 사이트 전체 배경 */
+body{
+    background:
+    radial-gradient(circle at top right,#25105a 0%,transparent 25%),
+    radial-gradient(circle at bottom left,#180844 0%,transparent 25%),
+    #040816;
+
+    color: white;
+    min-height: 100vh;
+}
+
+
+/* ==========================
+   헤더 영역
+========================== */
+
+/* 상단 네비게이션 바 */
+header{
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* 헤더 내부 정렬 */
+.navbar{
+    width: 1400px;
+    max-width: 95%;
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 사이트 로고 */
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* 로고 강조 색상 */
+.logo span{
+    color: #b16cff;
+}
+
+/* 메뉴 목록 */
+.menu{
+    display: flex;
+    gap: 50px;
+}
+
+/* 메뉴 링크 */
+.menu a{
+    color: #d8d8d8;
+    transition: 0.3s;
+}
+
+/* 마우스를 올렸을 때 */
+.menu a:hover{
+    color: #b16cff;
+}
+
+
+/* ==========================
+   버튼 디자인
+========================== */
+
+/* 기본 버튼 */
+.btn{
+    padding: 12px 28px;
+
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.15);
+
+    background: transparent;
+    color: white;
+
+    cursor: pointer;
+}
+
+/* 보라색 강조 버튼 */
+.btn-primary{
+    background: linear-gradient(
+        90deg,
+        #8b5cf6,
+        #c084fc
+    );
+
+    border: none;
+}
+
+
+/* ==========================
+   메인 배너(Hero)
+========================== */
+
+/* 첫 화면 전체 영역 */
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 50px;
+    padding: 70px 0;
+}
+
+/* 왼쪽 설명 부분 */
+.hero-text{
+    flex: 1;
+}
+
+/* 메인 문구 */
+.hero-text h1{
+    font-size: 64px;
+    line-height: 1.4;
+
+    margin-bottom: 25px;
+}
+
+/* 강조 문구 */
+.hero-text h1 span{
+    color: #b16cff;
+}
+
+/* 설명 글 */
+.hero-text p{
+    color: #b5b5c0;
+    font-size: 20px;
+
+    margin-bottom: 40px;
+}
+
+/* 버튼들을 가로로 배치 */
+.hero-buttons{
+    display: flex;
+    gap: 20px;
+}
+
+/* 오른쪽 이미지 영역 */
+.hero-image{
+    flex: 1;
+    text-align: center;
+}
+
+/* 메인 이미지 */
+.hero-image img{
+    width: 100%;
+    max-width: 550px;
+}
+
+
+/* ==========================
+   카드 디자인
+========================== */
+
+/* 게시글, 통계 등에 사용되는 카드 */
+.card{
+    background: rgba(15,20,40,0.8);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 24px;
+
+    box-shadow:
+    0 0 30px rgba(132,94,247,.15);
+}
+
+
+/* ==========================
+   게시글 목록
+========================== */
+
+/* 게시글 한 줄 */
+.board-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px;
+    margin-bottom: 18px;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.03);
+}
+
+/* 마우스를 올렸을 때 */
+.board-item:hover{
+    background: rgba(177,108,255,0.08);
+}
+
+/* 게시글 제목 */
+.board-title{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* 게시글 설명 */
+.board-desc{
+    color: #9fa4b6;
+}
+
+
+/* ==========================
+   페이지 번호
+========================== */
+
+/* 페이지 버튼 전체 */
+.pagination{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* 개별 페이지 버튼 */
+.page{
+    width: 50px;
+    height: 50px;
+
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+/* 현재 페이지 */
+.page.active{
+    background: linear-gradient(
+        90deg,
+        #8b5cf6,
+        #c084fc
+    );
+}
