@@ -1,0 +1,55 @@
+/* 헤더 */
+header{
+    height: 90px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.navbar{
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 로고 */
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo span{
+    color: #b16cff;
+}
+
+/* 메뉴 */
+.menu{
+    display: flex;
+    gap: 50px;
+}
+
+.menu a{
+    color: #d1d5db;
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    color: #b16cff;
+}
+
+/* 오른쪽 버튼 */
+.nav-right{
+    display: flex;
+    gap: 15px;
+}
+
+.login-btn{
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+}
+
+.signup-btn{
+    background: linear-gradient(90deg, #8b5cf6, #c084fc);
+    color: white;
+}
