@@ -34,7 +34,7 @@ while(
         ?>
         ">
 
-        <?= $post['title'] ?>
+        <?=$post['title']?>
 
         </a>
     </h3>
