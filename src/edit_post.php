@@ -89,6 +89,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
     exit;
 }
+?>
 
 <h1>게시글 수정</h1>
 
