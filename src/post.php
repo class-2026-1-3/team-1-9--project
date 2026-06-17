@@ -182,8 +182,28 @@ while(
         <p>
             <?=$comment['content']?>
         </p>
-        
-        <hr>
+        <?php
+        if(
+            isset($_SESSION['user_id'])
+            &&
+            $_SESSION['user_id']
+            ==
+            $comment['user_id']
+        ){
+        ?>
+
+        <a
+        href="delete_comment.php?id=<?=$comment['comment_id']?>"
+        onclick="return confirm('댓글을 삭제하시겠습니까?')"
+        >
+        삭제
+        </a>
+
+    <?php
+    }
+    ?>
+
+    <hr>
     </div>
     <?php
 }
