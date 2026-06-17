@@ -148,6 +148,9 @@ if(
     $post['user_id']
 ){
     ?>
+    <a href="edit_post.php?id=<?=$post['post_id']?>">
+    수정
+    </a>
 
     <a
     href="delete_post.php?id=<?=$post['post_id']?>"
