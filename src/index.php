@@ -37,8 +37,8 @@
             </div>
             <ul>
                 <li><a href="index.php">홈</a></li>
-                <li>고민 게시판</li>
-                <li>자유 게시판</li>
+                <li><a href="board.php?type=worry">고민 게시판</a></li>
+                <li><a href="board.php?type=free">자유 게시판</a></li>
                 <li>오늘의 한마디</li>
                 <li>공지사항</li>
             </ul>
@@ -54,8 +54,8 @@
             </h2>
             <p>익명으로 고민을 나누고 공감받아보세요.</p>
 
-            <button>고민 털어놓기</button>
-            <button>고민 보러가기</button>
+            <button onclick="location.href='write.php'">고민 털어놓기</button>
+            <button onclick="location.href='board.php?type=worry'">고민 보러가기</button>
         </section>
         
         <section>
