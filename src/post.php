@@ -39,17 +39,38 @@ $post=mysqli_fetch_assoc(
     $result
 );
 
-if(
-    isset($_SESSION['user_id'])
-    &&
-    $_SESSION['user_id']
-    ==
-    $post['user_id']
-)
-
 if(!$post){
     die('게시글이 존재하지 않습니다.');
 }
+
+$sql="
+SELECT COUNT(*) AS like_count
+FROM post_likes
+WHERE post_id=?
+";
+
+$stmt_like=mysqli_prepare(
+    $conn,
+    $sql
+);
+
+mysqli_stmt_bind_param(
+    $stmt_like,
+    "i",
+    $id
+);
+
+mysqli_stmt_execute(
+    $stmt_like
+);
+
+$result_like=mysqli_stmt_get_result(
+    $stmt_like
+);
+
+$like=mysqli_fetch_assoc(
+    $result_like
+);
 
 $sql="
 SELECT
@@ -232,5 +253,11 @@ if(isset($_SESSION['user_id'])){
 
 <?php
 }
-
 ?>
+<p>
+❤️ <?=$like['like_count']?>
+</p>
+
+<a href="like_post.php?id=<?=$post['post_id']?>">
+좋아요
+</a>

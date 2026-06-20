@@ -39,3 +39,8 @@ CREATE TABLE comments(
         REFERENCES users(user_id)
         ON DELETE CASCADE
 );
+CREATE TABLE post_likes (
+    post_id INT NOT NULL,
+    user_id INT NOT NULL,
+    PRIMARY KEY(post_id, user_id)
+);
