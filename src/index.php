@@ -40,6 +40,7 @@
                 <li><a href="board.php?type=worry">고민 게시판</a></li>
                 <li><a href="board.php?type=free">자유 게시판</a></li>
                 <li>오늘의 한마디</li>
+                <li><a href="mypage.php">마이페이지</a></li>
                 <li>공지사항</li>
             </ul>
         </nav>
