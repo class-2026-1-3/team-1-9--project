@@ -1,21 +1,22 @@
 <?php
+
 session_start();
 
-include "./includes/db.php";
+include __DIR__ . "/db.php";
 
 if(!isset($_SESSION['user_id'])){
-    die('로그인 필요');
+    die("로그인 필요");
 }
 
-if (!isset($_GET['id'])){
-    die('잘못된 접근');
+if(!isset($_GET['id'])){
+    die("잘못된 접근");
 }
 
-$id = $_GET['id'];
+$comment_id = $_GET['id'];
 
 $sql="
-DELETE FROM posts
-WHERE post_id=?
+DELETE FROM comments
+WHERE comment_id=?
 AND user_id=?
 ";
 
@@ -27,7 +28,7 @@ $stmt=mysqli_prepare(
 mysqli_stmt_bind_param(
     $stmt,
     "ii",
-    $id,
+    $comment_id,
     $_SESSION['user_id']
 );
 
@@ -36,7 +37,7 @@ mysqli_stmt_execute(
 );
 
 header(
-    "Location: board.php"
+    "Location: ".$_SERVER['HTTP_REFERER']
 );
 
 exit;

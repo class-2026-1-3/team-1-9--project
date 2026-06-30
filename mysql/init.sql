@@ -15,6 +15,7 @@ CREATE TABLE posts(
     title VARCHAR(255) NOT NULL,
     content TEXT NOT NULL,
     board_type ENUM('worry','free') NOT NULL,
+    category VARCHAR(50) DEFAULT NULL,
     likes INT DEFAULT 0,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     user_id INT NOT NULL,
@@ -43,4 +44,15 @@ CREATE TABLE post_likes (
     post_id INT NOT NULL,
     user_id INT NOT NULL,
     PRIMARY KEY(post_id, user_id)
+);
+
+-- Notices table for admin-managed announcements
+CREATE TABLE IF NOT EXISTS notices (
+    notice_id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NULL DEFAULT NULL,
+    user_id INT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE SET NULL
 );

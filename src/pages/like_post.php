@@ -2,7 +2,7 @@
 
 session_start();
 
-include "./includes/db.php";
+include __DIR__ . "/db.php";
 
 if(!isset($_SESSION['user_id'])){
     die("로그인 필요");
